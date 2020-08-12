@@ -14,8 +14,7 @@ public class ThreadCoordination {
 			factorialThreads.add(new FactorialThread(number));
 		}		
 		int i = 0;
-		for (Thread factThread : factorialThreads) {		
-			factThread.setDaemon(true);
+		for (Thread factThread : factorialThreads) {
 			factThread.start();
 		}
 		System.out.println("Total threads active after wait done = "+Thread.activeCount());

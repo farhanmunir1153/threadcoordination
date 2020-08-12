@@ -33,6 +33,9 @@ public class ThreadCoordination {
 			}
 		}		
 		System.out.println("Total threads active after wait done = "+Thread.activeCount()); 
+		if(Thread.activeCount() == 1) {
+			System.out.println("All factorial threads either completed or failed only main thread remains now");
+		}
 		
 	}
 	
